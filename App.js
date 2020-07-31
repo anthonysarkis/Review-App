@@ -6,6 +6,7 @@ import Home from './screens/home';
 import About from './screens/about';
 import * as Font from 'expo-font';
 import { AppLoading } from 'expo';
+//import MyStack from "./routes/homeStack";
 
 const getFonts = () => {
   return Font.loadAsync({
@@ -20,6 +21,7 @@ export default function App() {
 
   if(fontsLoaded) {
     return (
+      //<MyStack/>
       <View style={styles.container}>
         <Home></Home>
         <About></About>
