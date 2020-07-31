@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View,  } from 'react-native';
-import ReviewDetails from './screens/reviewDetails';
-import Home from './screens/home';
-import About from './screens/about';
+import { Text, View,  } from 'react-native';
 import * as Font from 'expo-font';
 import { AppLoading } from 'expo';
-//import MyStack from "./routes/homeStack";
+import AppNavigator from './routes/appNavigator';
 
 const getFonts = () => {
   return Font.loadAsync({
@@ -21,13 +17,7 @@ export default function App() {
 
   if(fontsLoaded) {
     return (
-      //<MyStack/>
-      <View style={styles.container}>
-        <Home></Home>
-        <About></About>
-        <ReviewDetails></ReviewDetails>
-        <StatusBar style="auto" />
-      </View>
+      <AppNavigator/>
     );
   }
   else {
@@ -40,12 +30,3 @@ export default function App() {
   }
 
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
