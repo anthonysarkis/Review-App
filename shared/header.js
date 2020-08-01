@@ -1,8 +1,6 @@
 import React from 'react';
 import { Text, View, Image, StyleSheet, ImageBackground } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
-import { Dimensions } from 'react-native';
-
 
 export default function Header({ navigation, title }) {
 

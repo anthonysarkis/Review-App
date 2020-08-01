@@ -23,6 +23,17 @@ export const globalStyles = StyleSheet.create({
         borderTopWidth: 1,
         borderTopColor: '#eee',
     },
+    modalContent: {
+        flex: 1,
+    },
+    modalToggle: {
+        marginBottom: 10,
+        borderWidth: 1,
+        borderColor: 'grey',
+        padding: 10,
+        borderRadius: 10,
+        alignSelf: 'center',
+    },
 });
 
 export const images = {
