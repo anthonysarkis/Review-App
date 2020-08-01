@@ -20,7 +20,7 @@ const Screens = ({navigation}) => {
                 name="About"
                 component={About}
                 options={{
-                    headerTitle: () => <Header navigation={navigation} title={'About'}/>
+                    header: () => <Header navigation={navigation} title={'About GameZone'}/>
                 }}
             />
         </Stack.Navigator>

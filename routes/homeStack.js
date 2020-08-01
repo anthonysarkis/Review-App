@@ -22,7 +22,7 @@ const Screens = ({ navigation}) => {
                 name="Home" 
                 component={Home} 
                 options={ {
-                    headerTitle: () => <Header navigation={navigation} title={'GameZone'} />, 
+                    header: () => <Header navigation={navigation} title={'GameZone'} />, 
                 }} 
             />
             <Stack.Screen 

@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import { Dimensions } from 'react-native';
 
 export const globalStyles = StyleSheet.create({
     container: {
@@ -15,21 +14,23 @@ export const globalStyles = StyleSheet.create({
         marginVertical: 8,
         lineHeight: 20,
     },
-    header: {
-        width: Dimensions.get('screen').width,
+    rating: {
         flexDirection: 'row',
-        alignItems: 'center',
         justifyContent: 'center',
-    },
-    headerText: {
-        fontWeight: 'bold',
-        fontSize: 20,
-        color: 'white',
-        letterSpacing: 1,
-    },
-    icon: {
-        position: 'absolute',
-        color: 'white',
-        left: 20,
+        paddingTop: 16,
+        paddingBottom: 5,
+        marginTop: 16,
+        borderTopWidth: 1,
+        borderTopColor: '#eee',
     },
 });
+
+export const images = {
+    ratings: {
+        '1': require('../assets/rating-1.png'),
+        '2': require('../assets/rating-2.png'),
+        '3': require('../assets/rating-3.png'),
+        '4': require('../assets/rating-4.png'),
+        '5': require('../assets/rating-5.png'),
+    }
+}
