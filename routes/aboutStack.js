@@ -1,10 +1,11 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import About from "../screens/about";
+import Header from "../shared/header";
 
 const Stack = createStackNavigator();
 
-const Screens = () => {
+const Screens = ({navigation}) => {
     return (
         <Stack.Navigator
             initialRouteName="Home"
@@ -18,14 +19,17 @@ const Screens = () => {
             <Stack.Screen
                 name="About"
                 component={About}
+                options={{
+                    headerTitle: () => <Header navigation={navigation} title={'About'}/>
+                }}
             />
         </Stack.Navigator>
     );
 };
 
-export default function AboutStack() {
+export default function AboutStack({ navigation }) {
     return (
-        <Screens/>
+        <Screens navigation={navigation}/>
     );
 }
 

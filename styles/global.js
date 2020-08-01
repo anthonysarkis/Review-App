@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { Dimensions } from 'react-native';
 
 export const globalStyles = StyleSheet.create({
     container: {
@@ -13,5 +14,22 @@ export const globalStyles = StyleSheet.create({
     paragraph: {
         marginVertical: 8,
         lineHeight: 20,
-    }
+    },
+    header: {
+        width: Dimensions.get('screen').width,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    headerText: {
+        fontWeight: 'bold',
+        fontSize: 20,
+        color: 'white',
+        letterSpacing: 1,
+    },
+    icon: {
+        position: 'absolute',
+        color: 'white',
+        left: 20,
+    },
 });

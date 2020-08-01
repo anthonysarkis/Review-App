@@ -1,13 +1,12 @@
 import React from "react";
-import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "../screens/home";
-import About from "../screens/about";
 import ReviewDetails from "../screens/reviewDetails";
+import Header from "../shared/header";
 
 const Stack = createStackNavigator();
 
-const Screens = () => {
+const Screens = ({ navigation}) => {
     return (
         <Stack.Navigator 
             initialRouteName="Home" 
@@ -16,13 +15,14 @@ const Screens = () => {
                     backgroundColor: '#333',
                 },
                 headerTintColor: 'white',
-                headerTitleAlign: 'center'
+                headerTitleAlign: 'center',
+                
             }}>
             <Stack.Screen 
                 name="Home" 
                 component={Home} 
                 options={ {
-                    title: 'GameZone', 
+                    headerTitle: () => <Header navigation={navigation} title={'GameZone'} />, 
                 }} 
             />
             <Stack.Screen 
@@ -34,12 +34,9 @@ const Screens = () => {
     );
 };
 
-export default function HomeStack() {
+export default function HomeStack({ navigation }) {
     return (
-        <Screens />
-        // <NavigationContainer>
-        //     <Screens/>
-        // </NavigationContainer>
+        <Screens navigation={navigation}/>
     );
 }
 
