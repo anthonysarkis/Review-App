@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Text, View,  } from 'react-native';
+import { Text, View  } from 'react-native';
 import * as Font from 'expo-font';
 import { AppLoading } from 'expo';
-import AppNavigator from './routes/appNavigator';
+import AppDrawer from './routes/drawer';
 
 const getFonts = () => {
   return Font.loadAsync({
@@ -17,7 +17,7 @@ export default function App() {
 
   if(fontsLoaded) {
     return (
-      <AppNavigator/>
+      <AppDrawer/>
     );
   }
   else {

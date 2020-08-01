@@ -7,7 +7,7 @@ import ReviewDetails from "../screens/reviewDetails";
 
 const Stack = createStackNavigator();
 
-const Navigation = () => {
+const Screens = () => {
     return (
         <Stack.Navigator 
             initialRouteName="Home" 
@@ -17,8 +17,7 @@ const Navigation = () => {
                 },
                 headerTintColor: 'white',
                 headerTitleAlign: 'center'
-            }}
-        >
+            }}>
             <Stack.Screen 
                 name="Home" 
                 component={Home} 
@@ -26,17 +25,21 @@ const Navigation = () => {
                     title: 'GameZone', 
                 }} 
             />
-            <Stack.Screen name="ReviewDetails" component={ReviewDetails} options={{title: 'Review Details'}} />
-            <Stack.Screen name="About" component={About} />
+            <Stack.Screen 
+                name="ReviewDetails" 
+                component={ReviewDetails} 
+                options={{title: 'Review Details'}} 
+            />
         </Stack.Navigator>
     );
 };
 
-export default function AppNavigator() {
+export default function HomeStack() {
     return (
-        <NavigationContainer>
-            <Navigation/>
-        </NavigationContainer>
+        <Screens />
+        // <NavigationContainer>
+        //     <Screens/>
+        // </NavigationContainer>
     );
 }
 
